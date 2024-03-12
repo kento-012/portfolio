@@ -1,0 +1,682 @@
+@charset "utf-8";
+
+/* テキストの色 */
+:root {
+  /* --text_color: #16ff8a; */
+  --text_color: black;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1080px;
+  padding: 0 6%;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+img {
+  box-shadow: 0px 16px 6px -8px rgba(16, 61, 72, .2);
+}
+
+h1,h2,h3,h4,h5,p{
+  color: var(--text_color);
+} 
+
+/* スクロール時のフェードイン---------------------- */
+.js_fade {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+}
+.scroll {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+/* 読み込み時のフェードイン */
+.js_lp {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: opacity 1s,visibility 1s, transform 1s;
+}
+.js_lp.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+
+/* ヘッター ---------------------------------------*/
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header>.container {
+  height: 100px;
+  max-width: 1080px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ロゴ -------------------------------------------*/
+.area_logo_header .logo {
+  display: block;
+}
+
+.area_logo_header img {
+  /* height: 40px; */
+  height: 80px;
+  vertical-align: bottom;
+  box-shadow : none;
+}
+
+.area_logo_header a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* ヘッターナビ -------------------------------------------*/
+.list_nav_header {
+  display: flex;
+  align-items: end;
+}
+
+/* ナビの文字の間隔 */
+.list_nav_header>li {
+  padding-left: 30px;
+}
+
+.list_nav_header a {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.list_nav_header a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+
+
+
+/* トップページ----------------------------------------------- */
+/* TOP----------------------------------------- */
+.area_top_view {
+  background: url(../images/top_BG2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.area_top_view>.container {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  /* TOPの要素を左揃えにする */
+  align-items: start;
+  justify-content: center;
+}
+
+/* トップタイトル */
+.top_title h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 120%;
+  display: block;
+  position: relative;
+}
+
+/* サブタイトル */
+.sub_title h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+/* トップの説明文 */
+.area_top_view p {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 175%;
+}
+
+/* WORKSグループとプロフィールとの間隔（area_homeとついているclass全てに適用）*/
+[class*="area_home"] {
+  /* padding: 上　左右　下; */
+  /* ただしアニメーションがついているものはjsの方で距離を管理されている */
+  padding: 100px 0 0px;
+}
+
+/* ヘッド（WORKSとか） --------------------------------------*/
+.head_home {
+  /* ヘッドとコンテンツの距離 */
+  margin: 0 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.head_home .ttl {
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  position: relative;
+}
+
+/* ヘッドタイトルの下線 */
+.head_home .ttl:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #CECDB9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* カルーセル （写真比率は元画像に依存）*/
+.slider {
+  /*左右に余白を持たせて中央寄せ*/
+  width: 100%;
+}
+
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+.slider p {
+  padding-top: 10px;
+}
+
+.slider img:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* スライド同士に余白をつける */
+.slider .slick-slide {
+  margin: 0 10px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: black !important;
+}
+
+/* moreボタン -------------------------------------*/
+.area_more_button>.container {
+  display: flex;
+}
+
+.more {
+  margin: 0 0 0 auto;
+}
+
+.square_button {
+  position: relative;
+  background-color: transparent;
+  color: #CECDB9;
+  padding: 12px 43px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1.5px solid #CECDB9;
+}
+
+.square_button:hover {
+  background-color: #CECDB9;
+  color: white;
+}
+
+
+
+
+/* プロフィール-------------------------------------- */
+/* 2分割レイアウト */
+.layout_2_div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layout_2_div>div {
+  width: 48%;
+}
+
+/* テキスト_ホーム（プロフィール文） */
+.layout_2_div .text_home {
+  width: 48%;
+}
+
+.text_home .ttl {
+  font-size: 24px;
+  font-weight: 400;
+  /* margin: 上 左右 下; */
+  margin: 0 0 20px;
+}
+
+.text_home p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+/* フッター --------------------------------------------*/
+footer>.container {
+  font-size: 10px;
+  font-weight: 400;
+  padding: 100px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+/* WORKSページ--------------------------------------------------------- */
+/* WORKSヘッター ----------------------------------------*/
+.area_works_view {
+  background: url(../images/top_BG2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.area_works_view>.container {
+  height: 270px;
+  /* コンテンツとの距離 */
+  /* margin-bottom: 40px; */
+  margin-bottom: 80px;
+}
+
+/* ページタイトル */
+.page_title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  /* "WORKS"の文字を下げる */
+  padding: 120px 0 0 0;
+  text-transform: uppercase;
+}
+
+/* WORKSグリッド------ */
+.grid {
+  display: grid;
+  gap: 60px 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* 画像と文字の余白 */
+.grid p {
+  padding-top: 5px;
+}
+
+/* WORKS詳細--------------------------------------------------- */
+/* 2段組にする */
+.works_contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works_contents article {
+  width: 74%;
+}
+
+/* 作品タイトルと使用技術 */
+.works_info {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.works_title {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 0;
+}
+
+.works_tech {
+  margin-top: 5px;
+}
+
+.lead {
+  margin-bottom: 30px;
+}
+
+/* works詳細内の写真グリッド */
+.article_imgae_grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+f
+.article_imgae_grid img {
+  margin-bottom: 5px;
+}
+
+/* 動画 */
+.video_test {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+}
+
+.video_test iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* pタグで囲ったもの同士の距離を空ける */
+.works_contents article p {
+  margin-bottom: 1rem;
+}
+
+/* 記事内の見出しの大きさ */
+.works_contents h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.works_contents p {
+  font-size: 13px;
+  font-weight: 300;
+  /* font-weight: 400; */
+}
+
+.ingenuity li {
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.works_contents span {
+  font-weight: 500;
+}
+
+.sourceURL {
+  padding-top: 50px;
+}
+
+/* リンクURL */
+.sourceURL a:link {
+  color: #0000EE;
+  text-decoration: underline;
+ }
+ 
+ .sourceURL a:visited {
+  color: #551A8B;
+  text-decoration: underline;
+ }
+ 
+ /* .sourceURL a:hover {} */
+ 
+ .sourceURL a:active {
+  color: #FF0000;
+  text-decoration: underline;
+ }
+
+
+/* サイドバー */
+.works_contents aside {
+  width: 22%;
+}
+
+.aside_works_title {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 8px 8px;
+  border-bottom: 2px #CECDB9 solid;
+}
+
+.aside_works {
+  list-style: none;
+  font-size: 13px;
+}
+
+.aside_works li {
+  border-bottom: 1px #ddd solid;
+}
+
+.aside_works a {
+  padding: 10px;
+  display: block;
+}
+
+.aside_works a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* ------------------------------------------------------------------- */
+/* プロフィールページ------------------------------------------------ */
+.profile_layout_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* aside */
+.profile_layout_2 aside {
+  width: 35%;
+}
+
+.aside_profile img {
+  margin-bottom: 20px;
+}
+
+.aside_profile .ttl {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  padding-bottom: 10px;
+}
+
+.aside_profile p {
+  font-size: 13px;
+}
+
+/* article */
+.profile_layout_2 article {
+  width: 58%;
+}
+
+.profile_info dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.profile_info dl p {
+  padding: 0;
+}
+
+.profile_info dt {
+  width: 30%;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  /* background-color: #DADADA; */
+}
+
+.profile_info dd {
+  width: 70%;
+  padding-bottom: 20px;
+  /* background-color: #F3F3F3; */
+  margin-bottom: 10px;
+}
+
+.profile_contents {
+  margin-top: 30px;
+}
+
+.profile_contents p {
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------- */
+/* レスポンシブ------------------------------------- */
+@media screen and (max-width: 768px) {
+
+  /* TOP---------------- */
+  .top_title h1 {
+    /* タイトルの大きさ */
+    font-size: 70px;
+  }
+
+  /* worksグリッドページ--------------------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* works詳細ページ---------------------------- */
+  .works_contents {
+    flex-direction: column;
+  }
+
+  .works_contents article {
+    width: 100%;
+  }
+
+  .works_contents aside {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .works_info {
+    margin-bottom: 30px;
+  }
+
+  .works_title {
+    font-size: 1.375rem;
+  }
+
+  .works_tech {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+
+  /* トップ　プロフィール---------- */
+  /* 名前の大きさ */
+  .text_home .ttl {
+    font-size: 25px;
+    font-weight: 400;
+    /* margin: 上 左右 下; */
+    margin: 0 0 20px;
+  }
+
+  /* 自己紹介の大きさ */
+  .text_home .description {
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+
+  /* プロフィールページ------------------------------------------------ */
+  .profile_img_caption .ttl {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    padding-bottom: 10px;
+  }
+
+}
+
+/* ウィンドウサイズ480px以下------------------------------------ */
+@media screen and (max-width: 480px) {
+
+  /* トップ　プロフィール---------- */
+  .layout_2_div>div {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+
+  /* テキスト_ホーム（プロフィール文） */
+  .layout_2_div .text_home {
+    width: 100%;
+  }
+
+  /* 名前の大きさ */
+  .text_home .ttl {
+    font-size: 30px;
+    font-weight: 400;
+    /* margin: 上 左右 下; */
+    margin: 0 0 20px;
+  }
+
+  /* 自己紹介の大きさ */
+  .text_home .description {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+
+  /* worksグリッドページ------------ */
+  .grid {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* プロフィール----------------- */
+  /* 名前の大きさ */
+  .text_home .ttl {
+    font-size: 30px;
+    font-weight: 400;
+    /* margin: 上 左右 下; */
+    margin: 0 0 20px;
+  }
+
+  /* 自己紹介の大きさ */
+  .text_home .description {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+
+  /* プロフィールページ------------------------------------------------ */
+  .profile_layout_2 aside {
+    width: 100%;
+  }
+  
+  .profile_layout_2 article {
+    width: 100%;
+  }
+
+  .aside_profile {
+    margin-bottom: 2rem;
+  }
+
+  .aside_profile .ttl {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    padding-bottom: 10px;
+  }
+}

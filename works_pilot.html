@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- <html lang="ja"> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="https://use.typekit.net/fuk1nmg.css">
+    <link rel="stylesheet" href="css/cssreset-min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/takechi.css">
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- slick.cssの読み込み -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- lightbox.css読み込み -->
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+    <!-- ヘッター -->
+    <header>
+        <div class="container">
+            <div class="area_logo_header">
+                <a href="index.html" class="logo">
+                    <img src="images/logo2.svg">
+                </a>
+            </div>
+            <nav class="nav_header">
+                <ul class="list_nav_header">
+                    <li><a href="works_table.html">WORKS</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ページタイトル -->
+        <div class="area_works_view">
+            <div class="container">
+                <h2 class="page_title">WORKS</h2>
+            </div>
+        </div>
+
+        <!-- worksコンテンツ -->
+        <div class="area_works_article">
+            <div class="works_contents container">
+                <article>
+                    <header class="works_info">
+                        <h3 class="works_title">PILOT展</h3>
+                        <p class="works_tech">使用技術：Processing、Kinect、Projection mapping</p>
+                    </header>
+                    <section class="lead">
+                        <p>
+                            3年生の前期に情報学部のPILOT展という学内展示に参加しました。この授業ではハンガリーに関するアプリ開発を行いました。
+                        </p>
+                        <p>初めてのアプリ開発で、この時はいかに体験者に楽しんでもらえるかという点に重きを置きました。</p>
+                    </section>
+
+                    <!-- 動画 -->
+                    <div class="video_test">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/NobjWPYLmsE?si=_wpAqkNKcalDvlTQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <!-- グリッド -->
+                    <div class="article_imgae_grid">
+                        <div class="item">
+                            <a href="images/works_images/PILOT_04.jpg" data-lightbox="group"><img
+                                    src="images/works_images/PILOT_04.jpg"></a>
+                            <p>展示ポスター</p>
+                        </div>
+                        <div class="item">
+
+                            <a href="images/works_images/PILOT_03.jpg" data-lightbox="group"><img
+                                    src="images/works_images/PILOT_03.jpg"></a>
+                            <p>Kinectという深度センサーを使用した</p>
+                        </div>
+                    </div>
+
+                    <h4>作品概要</h4>
+                    <p>タイトル「Translate Rain」</p>
+                    <p>
+                        この作品は、プロジェクションマッピングの作品で、体の動きをセンシングし、それを映像に反映しています。スクリーンの前に立つと体のシルエットが浮かび上がり、上から流れてくるハンガリー語に当たると当たっている部分が日本語化されます。
+                    </p>
+
+                    <h4>制作意図</h4>
+                    <p>
+                        私たちが日本人という前提で、他の言語を見つめるときに自分というレンズを通して見ているということを表現しようとしました。上から降ってくるハンガリー語が自分のシルエットに触れると、自分というレンズを通して日本語になるようにしました
+                    </p>
+                    <p>また体を動かして体験するので、作品を動きながら楽しんでもらうことも目標としました。</p>
+
+                    <h4>工夫した点</h4>
+
+                    <ul class="ingenuity">
+                        <li>触れた時にハンガリー語の発音をつけた</li>
+                        <li>シルエットに当たった瞬間、文字を大きくし、当たったことをわからせ、触れた時の楽しさを演出した</li>
+                        <li>ハンガリー語から日本語に変わる時、単語が全て変わるのではなく、触れているところだけが変わる</li>
+                        <li>降ってくる語は、ハンガリー語の辞書からランダムに選んだこと</li>
+                        <li>上から降ってくるまだ触れていない単語は点滅させることで、触りたくさせた</li>
+                        <li>体のシルエットに単語が当たると、徐々に減速するようにし、可読性や感覚的に触れていることをわかってもらえるようにした</li>
+                    </ul>
+
+                    <div class="sourceURL">
+                        <p>Github : <a href="https://github.com/kento-012/Translate-Rain">kento-012/Translate-Rain</a>
+                        </p>
+                        <p><a href="https://www.meisei-u.ac.jp/2023/2023071201.html">「PILOT展」 〜情報学科 x
+                                国際コミュニケーション学科協働プロジェクトについて〜 | 明星大学</a></p>
+                    </div>
+                </article>
+
+                <aside>
+                    <h5 class="aside_works_title">WORKS</h5>
+                    <ul class="aside_works">
+                        <li><a href="works_pilot.html">PILOT展</a></li>
+                        <li><a href="works_HungaReCollection.html">Hunga -Re- Collection展</a></li>
+                        <li><a href="works_BeatBall.html">心拍のビジュアライゼーション</a></li>
+                        <li><a href="works_kikaku5.html">自治体との連携授業</a></li>
+                        <li><a href="works_HangOut.html">建築分野とのコラボレーション・ハッカソン「モノの移り変わり」</a></li>
+                        <li><a href="works_mediaB.html">ゲームの制作</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">© 2023 UCHIDAKENTO</p>
+        </div>
+    </footer>
+
+    <!-- jquery読み込み -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- ligitbox読み込み -->
+    <script src="js/lightbox.js" type="text/javascript"></script>
+    <!-- jsの読み込み -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
