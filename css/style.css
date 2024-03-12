@@ -2,8 +2,8 @@
 
 /* テキストの色 */
 :root {
-  /* --text_color: #16ff8a; */
-  --text_color: black;
+  --text_color: rgb(50, 50, 50);
+  /* --text_color: black; */
 }
 
 a {
@@ -25,7 +25,7 @@ img {
   box-shadow: 0px 16px 6px -8px rgba(16, 61, 72, .2);
 }
 
-h1,h2,h3,h4,h5,p{
+h1,h2,h3,h4,h5,p,li{
   color: var(--text_color);
 } 
 
@@ -79,9 +79,13 @@ header>.container {
 
 .area_logo_header img {
   /* height: 40px; */
-  height: 80px;
+  height: 70px;
   vertical-align: bottom;
   box-shadow : none;
+}
+
+.list_nav_header a {
+  color: var(--text_color);
 }
 
 .area_logo_header a:hover {
@@ -396,8 +400,8 @@ f
 
 /* 記事内の見出しの大きさ */
 .works_contents h4 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -405,6 +409,7 @@ f
 .works_contents p {
   font-size: 13px;
   font-weight: 300;
+  line-height: 170%;
   /* font-weight: 400; */
 }
 
@@ -463,6 +468,7 @@ f
 }
 
 .aside_works a {
+  color: var(--text_color);
   padding: 10px;
   display: block;
 }
@@ -509,6 +515,7 @@ f
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  color: var(--text_color);
 }
 
 .profile_info dl p {
