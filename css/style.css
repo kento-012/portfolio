@@ -2,8 +2,7 @@
 
 /* テキストの色 */
 :root {
-  --text_color: rgb(50, 50, 50);
-  /* --text_color: black; */
+  --text_color: #323232;
 }
 
 a {
