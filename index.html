@@ -25,23 +25,7 @@
 </head>
 
 <body>
-
-    <!-- ヘッター -->
-    <header>
-        <div class="container">
-            <div class="area_logo_header">
-                <a href="index.html" class="logo">
-                    <img src="images/logo3.svg">
-                </a>
-            </div>
-            <nav class="nav_header">
-                <ul class="list_nav_header">
-                    <li><a href="works_table.html">WORKS</a></li>
-                    <li><a href="profile.html">PROFILE</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include "header.html"; ?>
 
     <!-- メイン -->
     <main>
@@ -59,6 +43,9 @@
                     <p>学部では企画の立案やプレゼンを学んでいますが、ある授業からプログラミングに興味を持ち、独学でプログラミングを始めました。</p>
                     <p>今では情報学部の授業に参加するなど、日々プログラミングを学んでいます。</p>
                     <p>このポートフォリオではプログラミングを使ったものとデザイン学部で取り組んだものを紹介しています。</p>
+                    <p>
+                        <?php echo "これはPHPで出力した文章です"; ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -154,12 +141,7 @@
         </div>
     </main>
 
-    <!-- フッター -->
-    <footer>
-        <div class="container">
-            <p class="copyright">© 2023 UCHIDAKENTO</p>
-        </div>
-    </footer>
+    <?php include "footer.html" ?>
 
     <!-- jqueryの読み込み -->
     <script src="js/jquery-3.7.1.min.js"></script>

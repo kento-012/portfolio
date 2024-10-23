@@ -26,22 +26,7 @@
 </head>
 
 <body>
-    <!-- ヘッター -->
-    <header>
-        <div class="container">
-            <div class="area_logo_header">
-                <a href="index.html" class="logo">
-                    <img src="images/logo3.svg">
-                </a>
-            </div>
-            <nav class="nav_header">
-                <ul class="list_nav_header">
-                    <li><a href="works_table.html">WORKS</a></li>
-                    <li><a href="profile.html">PROFILE</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include "header.html"; ?>
 
     <main>
         <!-- ページタイトル -->
@@ -77,11 +62,13 @@
                     <!-- グリッド -->
                     <div class="article_imgae_grid">
                         <div class="item">
-                            <a href="images/works_images/BeatBall_04.jpg" data-lightbox="group"><img src="images/works_images/BeatBall_04.jpg"></a>
+                            <a href="images/works_images/BeatBall_04.jpg" data-lightbox="group"><img
+                                    src="images/works_images/BeatBall_04.jpg"></a>
                             <p class="caption">経過時間や分間の脈数も表示</p>
                         </div>
                         <div class="item">
-                            <a href="images/works_images/BeatBall_03.jpg" data-lightbox="group"><img src="images/works_images/BeatBall_03.jpg"></a>
+                            <a href="images/works_images/BeatBall_03.jpg" data-lightbox="group"><img
+                                    src="images/works_images/BeatBall_03.jpg"></a>
                             <p>パルスオキシメーター、参考（https://www.mikroe.com/heart-rate-click）</p>
                         </div>
                     </div>
@@ -123,11 +110,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p class="copyright">© 2023 UCHIDAKENTO</p>
-        </div>
-    </footer>
+    <?php include "footer.html" ?>
 
     <!-- jquery読み込み -->
     <script src="js/jquery-3.7.1.min.js"></script>

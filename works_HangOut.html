@@ -26,22 +26,7 @@
 </head>
 
 <body>
-    <!-- ヘッター -->
-    <header>
-        <div class="container">
-            <div class="area_logo_header">
-                <a href="index.html" class="logo">
-                    <img src="images/logo3.svg">
-                </a>
-            </div>
-            <nav class="nav_header">
-                <ul class="list_nav_header">
-                    <li><a href="works_table.html">WORKS</a></li>
-                    <li><a href="profile.html">PROFILE</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include "header.html"; ?>
 
     <main>
         <!-- ページタイトル -->
@@ -82,11 +67,13 @@
                     <!-- グリッド -->
                     <div class="article_imgae_grid">
                         <div class="item">
-                            <a href="images/works_images/HangOut_02.jpg" data-lightbox="group"><img src="images/works_images/HangOut_02.jpg"></a>
+                            <a href="images/works_images/HangOut_02.jpg" data-lightbox="group"><img
+                                    src="images/works_images/HangOut_02.jpg"></a>
                             <p>会場での展示の様子</p>
                         </div>
                         <div class="item">
-                            <a href="images/works_images/HangOut_03.jpg" data-lightbox="group"><img src="images/works_images/HangOut_03.jpg"></a>
+                            <a href="images/works_images/HangOut_03.jpg" data-lightbox="group"><img
+                                    src="images/works_images/HangOut_03.jpg"></a>
                             <p>廃材のガラス片。モーターに接続した箱に入れ、回すことで音を出している</p>
                         </div>
                     </div>
@@ -116,7 +103,8 @@
                     </ul>
 
                     <div class="sourceURL">
-                        <p><a href="https://www.meisei-u.ac.jp/2023/2023082202.html">情報学部オープンラボワークショップ：建築分野とのコラボレーション・ハッカソン「モノの移り変わり」 | 明星大学</a></p>
+                        <p><a href="https://www.meisei-u.ac.jp/2023/2023082202.html">情報学部オープンラボワークショップ：建築分野とのコラボレーション・ハッカソン「モノの移り変わり」
+                                | 明星大学</a></p>
                     </div>
                 </article>
 
@@ -135,11 +123,7 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p class="copyright">© 2023 UCHIDAKENTO</p>
-        </div>
-    </footer>
+    <?php include "footer.html" ?>
 
     <!-- jquery読み込み -->
     <script src="js/jquery-3.7.1.min.js"></script>
