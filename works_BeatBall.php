@@ -1,11 +1,33 @@
+<?php
+
+include "dbConfig.php";
+
+// パラメータ取得とSQL実行
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+if (!$id) {
+    echo "Invalid ID.";
+    exit;
+}
+
+$sql = "SELECT * FROM works WHERE id = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->execute();
+$work = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$work) {
+    echo "Work not found.";
+    exit;
+}
+?>
+
 <!DOCTYPE html>
-<!-- <html lang="ja"> -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title><?= htmlspecialchars($work['title'], ENT_QUOTES, 'UTF-8') ?></title>
     <!-- cssの読み込み -->
     <link rel="stylesheet" href="https://use.typekit.net/fuk1nmg.css">
     <link rel="stylesheet" href="css/cssreset-min.css">
@@ -21,8 +43,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <!-- lightbox.css読み込み -->
-    <link rel="stylesheet" href="css/lightbox.css">
 </head>
 
 <body>
@@ -41,7 +61,7 @@
             <div class="works_contents container">
                 <article>
                     <header class="works_info">
-                        <h3 class="works_title">心拍のビジュアライゼーション</h3>
+                        <h3 class="works_title"><?= htmlspecialchars($work['title'], ENT_QUOTES, 'UTF-8') ?></h3>
                         <p class="works_tech">使用技術：Processing、Arduino</p>
                     </header>
 

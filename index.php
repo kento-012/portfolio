@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <html lang="ja"> -->
 <html lang="en">
 
 <head>
@@ -25,6 +24,14 @@
 </head>
 
 <body>
+    <?php include "dbConfig.php"; ?>
+    <?php
+    // 作品情報を取得
+    $sql = "SELECT * FROM works";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $works = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    ?>
     <?php include "header.html"; ?>
 
     <!-- メイン -->
@@ -43,15 +50,11 @@
                     <p>学部では企画の立案やプレゼンを学んでいますが、ある授業からプログラミングに興味を持ち、独学でプログラミングを始めました。</p>
                     <p>今では情報学部の授業に参加するなど、日々プログラミングを学んでいます。</p>
                     <p>このポートフォリオではプログラミングを使ったものとデザイン学部で取り組んだものを紹介しています。</p>
-                    <p>
-                        <?php echo "これはPHPで出力した文章です"; ?>
-                    </p>
                 </div>
             </div>
         </div>
 
         <div class="js_fade">
-            <!-- WORKS slickでのカルーセル　ulで管理 -->
             <section class="area_home_feature">
                 <div class="container">
                     <div class="head_home">
@@ -59,31 +62,15 @@
                             <h2 class="ttl">WORKS</h2>
                         </a>
                     </div>
+
+                    <!-- WORKS カルーセル -->
                     <ul class="slider">
-                        <a href="works_pilot.html">
-                            <li><img src="images/works_images/PILOT_01.jpg" alt=""></li>
-                            <p>PILOT展</p>
-                        </a>
-                        <a href="works_HungaReCollection.html">
-                            <li><img src="images/works_images/HungaRe_01.jpg" alt=""></li>
-                            <p>Hunga -Re- Collection展</p>
-                        </a>
-                        <a href="works_BeatBall.html">
-                            <li><img src="images/works_images/BeatBall_01.jpg" alt=""></li>
-                            <p>心拍のビジュアライゼーション</p>
-                        </a>
-                        <a href="works_kikaku5.html">
-                            <li><img src="images/works_images/kikaku5_04.jpg" alt=""></li>
-                            <p>自治体との連携授業</p>
-                        </a>
-                        <a href="works_HangOut.html">
-                            <li><img src="images/works_images/HangOut_02.jpg" alt=""></li>
-                            <p>建築分野とのコラボレーション・ハッカソン「モノの移り変わり」</p>
-                        </a>
-                        <a href="works_mediaB.html">
-                            <li><img src="images/works_images/mediaB_01.jpg" alt=""></li>
-                            <p>ゲームの制作</p>
-                        </a>
+                        <?php foreach ($works as $work): ?>
+                            <a href="work.php?id=<?= htmlspecialchars($work['id'], ENT_QUOTES, 'UTF-8') ?>">
+                                <li><img src="images/work/<?= htmlspecialchars($work['image_path_1'], ENT_QUOTES, 'UTF-8') ?>" alt=""></li>
+                                <p><?= htmlspecialchars($work['title'], ENT_QUOTES, 'UTF-8') ?></p>
+                            </a>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </section>
@@ -92,7 +79,7 @@
             <div class="area_more_button">
                 <div class="container">
                     <div class="more">
-                        <a href="works_table.html">
+                        <a href="works_table.php">
                             <button class="square_button">more</button>
                         </a>
                     </div>
@@ -132,7 +119,7 @@
             <div class="area_more_button">
                 <div class="container">
                     <div class="more">
-                        <a href="profile.html">
+                        <a href="profile.php">
                             <button class="square_button">more</button>
                         </a>
                     </div>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>PROFILE</title>
     <!-- cssの読み込み -->
     <link rel="stylesheet" href="https://use.typekit.net/fuk1nmg.css">
     <link rel="stylesheet" href="css/cssreset-min.css">
@@ -59,12 +59,11 @@
                                     <p>アドビ認定プロフェッショナル Illustrator 2020</p>
                                 </dd>
                                 <dt>使用言語：</dt>
-                                <dd>Processing、HTML、CSS、Arduino</dd>
+                                <dd>HTML、CSS、JavaScript、PHP、Processing、Arduino IDE</dd>
                             </dl>
                         </div>
 
                         <div class="profile_contents">
-                            <!-- <p>一度ハマると長時間やり続ける性格。</p> -->
                             <p>学部では企画の立案やプレゼンの方法を学んでいます。</p>
                             <p>同じことを伝える場合でもメディアによって受け取り方が違うことに面白さを感じ、メディアデザインを専攻しています。どのメディアを使って、どのように伝えるかを研究しています。</p>
                             <p>メディアの授業からプログラミングに興味を持ち始め、プログラミングで作品を作ることが多いです。</p>
